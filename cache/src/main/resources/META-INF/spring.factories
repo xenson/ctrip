@@ -1,0 +1,1 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.ctrip.car.osd.framework.cache.autoconfigure.CacheConfiguration

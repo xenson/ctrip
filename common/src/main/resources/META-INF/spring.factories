@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+ com.ctrip.car.osd.framework.common.autoconfigure.CtripAutoConfiguration,\
+ com.ctrip.car.osd.framework.common.spring.SpringConfiguration

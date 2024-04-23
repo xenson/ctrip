@@ -1,0 +1,66 @@
+namespace java com.ctriposs.baiji.rpc.common.types
+namespace csharp CServiceStack.Common.Types
+
+class BaseRequest{
+    string sourceFrom;
+    int channelType;
+    string requestId;
+    /*分销渠道*/
+    AllianceInfoDTO allianceInfo;
+    /*本地语言*/
+    string locale;
+    /*货币*/
+    string currencyCode;
+    /*移动设备信息*/
+    MobileDTO mobileInfo;
+    /*客源国ID*/
+    int sourceCountryId;
+    string site;
+    string language;
+    string sessionId;
+    bool isWireless;
+    int invokeFrom;
+    int channelId;
+    string uid;
+    int patternType;
+    map<string,string> extraTags;
+}
+
+/*分销基本信息*/
+class AllianceInfoDTO {
+    /*分销联盟*/
+    int allianceId;
+    /*分销联盟二级分销ID*/
+    string ouid;
+    /*分销联盟三级分销ID*/
+    int sid;
+    /*分销商订单Id*/
+    string distributorOrderId; 
+    /*分销商用户Id*/
+    string distributorUID;
+    string distributorChannelId;
+}
+
+/*无线实体信息*/
+class MobileDTO {
+    /*无线用户纬度*/
+    decimal customerGPSLat;
+    /*无线用户经度*/
+    decimal customerGPSLng;
+    /*用户手机类型Android、iOS等*/
+    string mobileModel;
+    /*用户手机的SN编号，机器唯一标识*/
+    string mobileSN;
+    /*用户IP地址*/
+    string customerIP;
+    /*无线版本号*/
+    string wirelessVersion;    
+}
+
+class BaseResponse{
+    bool isSuccess;
+    string code;
+    string returnMsg;
+    string requestId;
+    long cost;
+}
